@@ -29,7 +29,7 @@ spec:
     value: 5d
   - name: build-platforms
     value:
-    - linux/x86_64
+    - linux/ppc64le
   - name: dockerfile
     value: Dockerfile
   pipelineSpec:
@@ -110,7 +110,7 @@ spec:
       name: build-args-file
       type: string
     - default:
-      - linux/x86_64
+      - linux/ppc64le
       description: List of platforms to build the container images on. The available
         set of values is determined by the configuration of the multi-platform-controller.
       name: build-platforms
@@ -240,7 +240,7 @@ spec:
         - name: name
           value: buildah-remote-oci-ta
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-buildah-remote-oci-ta:0.4@sha256:93f3e1ee128a56874a9e093a9e46a58639c10b8a86bae4c10363393045e3f76a
+          value: quay.io/konflux-ci/pull-request-builds:buildah-remote-oci-ta-0.4@sha256:12ea198166ab333a895bb6e29629d3850b429f1326238473ec5397b11b2cc280
         - name: kind
           value: task
         resolver: bundles
